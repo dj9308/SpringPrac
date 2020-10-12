@@ -5,6 +5,18 @@
 <title>test</title>
 </head>
 <body>
-	<h1 th:text="${text}"></h1>
+	<table>
+		<thead></thead>
+		<tbody>
+			<tr th:each="list, iterStat : ${list}">
+				<td th:text="${list.num}"></td>
+				<td th:text="${list.title}"></td>
+				<td th:text="${list.writer}"></td>
+				<td th:text="${#dates.format(list.date,'yyyy-MM-dd')}"></td>
+				<td th:text="${list.cnt}"></td>
+				<td th:text="${list.rcmd}"></td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
