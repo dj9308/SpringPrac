@@ -8,11 +8,8 @@
 
 ## 진행사항
 
-- 20201011
-  - 환경설정 및 MVC 아키텍쳐 적용
-- 20201012
-  - gradle 적용 방법 재확인 및 flyway 적용
-- 20201013
-  - bootstrap 적용 및 base.html 추가 및 기본 table 생성
+- 환경설정 및 MVC 아키텍쳐 적용
+- gradle 적용 방법 재확인 및 flyway 적용
+- bootstrap 적용 및 layout 나누기
 
 [관련 문서](https://github.com/dj9308/Temp)
