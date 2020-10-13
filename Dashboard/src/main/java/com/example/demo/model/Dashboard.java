@@ -15,10 +15,9 @@ public class Dashboard {
 	public static final String SINGULAR = "dashboard";
 	public static final String MULTIPLE = "dashboards";
 	
-	@Id
-	private long id;
 	
-	@Column(length=20)
+	
+	@Id
 	private long num;
 	
 	@Column(length=255)
