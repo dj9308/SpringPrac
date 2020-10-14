@@ -7,13 +7,16 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.mapper.DashboardMapper;
 import com.example.demo.model.Dashboard;
+import com.example.demo.repository.DashboardRepository;
 
 @Service
 public class DashboardService {
 	@Autowired
 	DashboardMapper dashboardmapper;
-	
+	@Autowired
+	DashboardRepository dashboardRepository;
+		
 	public List<Dashboard> list(){
-		return dashboardmapper.findall();
+		return dashboardRepository.findAll();
 	}
 }

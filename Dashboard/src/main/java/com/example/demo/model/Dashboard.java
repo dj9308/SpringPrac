@@ -4,7 +4,10 @@ import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -23,8 +26,9 @@ public class Dashboard {
 	@Column(length=255)
 	private String title;
 
-	@Column(length=255)
-	private String writer;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name = "writer")
+	private User users;
 	
 	@CreationTimestamp
 	private Timestamp date;
@@ -51,13 +55,6 @@ public class Dashboard {
 		this.title = title;
 	}
 
-	public String getWriter() {
-		return writer;
-	}
-
-	public void setWriter(String writer) {
-		this.writer = writer;
-	}
 
 	public Timestamp getDate() {
 		return date;
@@ -91,11 +88,21 @@ public class Dashboard {
 		return MULTIPLE;
 	}
 
+	public User getUsers() {
+		return users;
+	}
+
+	public void setUsers(User users) {
+		this.users = users;
+	}
+
 	@Override
 	public String toString() {
-		return "Dashboard [num=" + num + ", title=" + title + ", writer=" + writer + ", date=" + date + ", cnt=" + cnt
+		return "Dashboard [num=" + num + ", title=" + title + ", users=" + users + ", date=" + date + ", cnt=" + cnt
 				+ ", rcmd=" + rcmd + "]";
 	}
+
+	
 	
 }
 

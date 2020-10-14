@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
@@ -18,7 +18,7 @@
 							<tr>
 								<th class="text-center" scope="col">글번호</th>
 								<th class="text-center" scope="col">제목</th>
-								<th class="text-center" scope="col" >작성자</th>
+								<th class="text-center" scope="col">작성자</th>
 								<th class="text-center" scope="col">작성일</th>
 								<th class="text-center" scope="col">조회수</th>
 								<th class="text-center" scope="col">추천수</th>
@@ -28,7 +28,7 @@
 							<tr th:each="list, iterStat : ${list}">
 								<td class="text-center" th:text="${list.num}"></td>
 								<td class="text-center" th:text="${list.title}"></td>
-								<td class="text-center" th:text="${list.writer}"></td>
+								<td class="text-center" th:text="${list.users.ID}"></td>
 								<td class="text-center" th:text="${#dates.format(list.date,'yyyy-MM-dd')}"></td>
 								<td class="text-center" th:text="${list.cnt}"></td>
 								<td class="text-center"  th:text="${list.rcmd}"></td>
