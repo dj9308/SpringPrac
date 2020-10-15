@@ -19,4 +19,8 @@ public class DashboardService {
 	public List<Dashboard> list(){
 		return dashboardRepository.findAll();
 	}
+	
+	public Dashboard findbynum(long num) {
+		return dashboardRepository.findByNum(num);
+	}
 }

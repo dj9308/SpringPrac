@@ -38,6 +38,9 @@ public class Dashboard {
 	
 	@Column(length = 20)
 	private long rcmd;
+	
+	@Column
+	private String content;
 
 	public long getNum() {
 		return num;
@@ -95,14 +98,21 @@ public class Dashboard {
 	public void setUsers(User users) {
 		this.users = users;
 	}
+	
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
 
 	@Override
 	public String toString() {
 		return "Dashboard [num=" + num + ", title=" + title + ", users=" + users + ", date=" + date + ", cnt=" + cnt
-				+ ", rcmd=" + rcmd + "]";
+				+ ", rcmd=" + rcmd + ", content=" + content + "]";
 	}
-
-	
 	
 }
 

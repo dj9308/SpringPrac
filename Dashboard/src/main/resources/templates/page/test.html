@@ -25,7 +25,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr th:each="list, iterStat : ${list}">
+							<tr th:each="list, iterStat : ${list}" th:onclick="|javascript:page('${list.num}')|">
 								<td class="text-center" th:text="${list.num}"></td>
 								<td class="text-center" th:text="${list.title}"></td>
 								<td class="text-center" th:text="${list.users.ID}"></td>
@@ -35,7 +35,9 @@
 							</tr>
 						</tbody>
 					</table>
+					
+		<script th:src="@{/js/board/test.js}"></script>	
     </div>
-
+    
 
 </html>

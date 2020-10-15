@@ -6,10 +6,10 @@
     <th:block th:fragment="configFragment">
     
         <!-- 이 영역에 공통으로 사용할 css, js library를 선언한다. -->
-        <link rel="stylesheet" th:href="@{/css/common/common.css}" >
         <!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+		<!-- jquery -->
+		<script th:src="@{/js/ext/jquery-3.3.1.min.js}"></script>
         <!-- Content Page의 CSS fragment 삽입 -->
         <th:block layout:fragment="css"></th:block>
 

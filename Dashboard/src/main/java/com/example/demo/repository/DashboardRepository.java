@@ -10,4 +10,5 @@ import com.example.demo.model.Dashboard;
 @Repository
 public interface DashboardRepository extends JpaRepository<Dashboard, Integer>{
 	public List<Dashboard> findAll();
+	public Dashboard findByNum(long num);
 }
