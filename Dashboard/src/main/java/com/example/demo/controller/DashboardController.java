@@ -18,7 +18,7 @@ public class DashboardController {
 	
 	@GetMapping
 	public String main(Model model) {
-		model.addAttribute("list",dashboardService.list());
+		model.addAttribute("list",dashboardService.Paging());
 		return "page/test";
 	}
 	

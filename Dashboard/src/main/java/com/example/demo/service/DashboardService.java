@@ -10,17 +10,26 @@ import com.example.demo.model.Dashboard;
 import com.example.demo.repository.DashboardRepository;
 
 @Service
-public class DashboardService {
+public class DashboardService extends SuperDashboardService{
 	@Autowired
 	DashboardMapper dashboardmapper;
 	@Autowired
 	DashboardRepository dashboardRepository;
-		
+	
+	@Override
+	public Dashboard findbynum(long num) {
+		// TODO Auto-generated method stub
+		return super.findbynum(num);
+	}
+	
 	public List<Dashboard> list(){
 		return dashboardRepository.findAll();
 	}
-	
-	public Dashboard findbynum(long num) {
-		return dashboardRepository.findByNum(num);
+
+	@Override
+	public Object Paging() {
+		// TODO Auto-generated method stub
+		return dashboardRepository.findAll();
 	}
+	
 }
