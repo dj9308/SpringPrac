@@ -8,9 +8,6 @@
 
 ## 진행사항
 
-- 환경설정 및 MVC 아키텍쳐 적용
-- gradle 적용 방법 재확인 및 flyway 적용
-- bootstrap 적용 및 layout 나누기
-- user table 생성 및 join column 설정
+- 관심사에 따른 기능 분리
 
-[관련 문서](https://github.com/dj9308/Temp)
+[관련 문서](https://github.com/dj9308/Temp/Spring)
