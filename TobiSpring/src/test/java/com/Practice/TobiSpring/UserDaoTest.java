@@ -2,17 +2,18 @@ package com.Practice.TobiSpring;
 
 import java.sql.SQLException;
 
-import com.Practice.DAO.ConnectionMaker;
-import com.Practice.DAO.DConnectionMaker;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.Practice.DAO.DaoFactory;
 import com.Practice.DAO.UserDao;
 import com.Practice.VO.UserVO;
 
 public class UserDaoTest {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		
-		ConnectionMaker connectionMaker = new DConnectionMaker();
-		UserDao dao = new UserDao(connectionMaker);
+		ApplicationContext context = new AnnotationConfigApplicationContext(DaoFactory.class);
+		UserDao dao = context.getBean("userDao",UserDao.class);
 		int i =0;
 		UserVO user = new UserVO();
 		user.setId("testId");
